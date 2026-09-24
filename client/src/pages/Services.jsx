@@ -55,7 +55,7 @@ const Services = () => {
 
       {/* machine delivery & installation */}
       <section className='bg-white py-16 sm:py-20'>
-        <div className='page-wrap grid items-center gap-12 lg:grid-cols-2'>
+        <div className='page-wrap grid grid-cols-1 items-center gap-12 lg:grid-cols-2'>
           <div data-aos='fade-right' className='relative'>
             <div aria-hidden='true' className='absolute -inset-3 -z-10 -rotate-2 rounded-[2rem] bg-brand-100' />
             <img

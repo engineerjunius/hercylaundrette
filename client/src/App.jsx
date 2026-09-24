@@ -26,7 +26,9 @@ const App = () => {
   }, [pathname])
 
   return (
-    <div className='flex min-h-screen flex-col'>
+    // overflow-x-clip: AOS fade-left/right start 100px off-canvas, which would
+    // otherwise let the page scroll sideways on phones
+    <div className='flex min-h-screen flex-col overflow-x-clip'>
       <Navbar />
 
       <main className='flex-1 pt-16 sm:pt-20'>

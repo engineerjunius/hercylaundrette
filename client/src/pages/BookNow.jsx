@@ -84,7 +84,7 @@ const BookNow = () => {
 
   return (
     <section className='page-wrap py-16 sm:py-20'>
-      <div className='grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16'>
+      <div className='grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16'>
         {/* intro */}
         <div data-aos='fade-right'>
           <p className='eyebrow'>Book now</p>
@@ -149,7 +149,7 @@ const BookNow = () => {
               </button>
             </div>
           ) : (
-            <form onSubmit={sendEmail} className='grid gap-5 sm:grid-cols-2'>
+            <form onSubmit={sendEmail} className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
               <div className='sm:col-span-2'>
                 <Field label='Full name' htmlFor='user_name'>
                   <input id='user_name' name='user_name' type='text' required autoComplete='name'

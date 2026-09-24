@@ -31,9 +31,9 @@ const Hero = () => {
         <div className='absolute top-40 -right-24 h-96 w-96 rounded-full bg-sun-300/40 blur-3xl' />
       </div>
 
-      <div className='page-wrap grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-2 lg:py-24'>
+      <div className='page-wrap grid grid-cols-1 items-center gap-12 py-12 sm:py-16 lg:grid-cols-2 lg:py-24'>
         {/* copy */}
-        <div className='text-center lg:text-left'>
+        <div className='min-w-0 text-center lg:text-left'>
           <span
             data-aos='fade-up'
             className='inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold text-brand-700 ring-1 ring-brand-100 shadow-sm'
@@ -101,7 +101,7 @@ const Hero = () => {
         </div>
 
         {/* photo carousel */}
-        <div data-aos='fade-left' data-aos-delay='200' className='relative mx-auto w-full max-w-md lg:max-w-none'>
+        <div data-aos='fade-left' data-aos-delay='200' className='relative mx-auto w-full min-w-0 max-w-md lg:max-w-none'>
           <div aria-hidden='true' className='absolute -inset-3 -z-10 rotate-3 rounded-[2rem] bg-sun-400/70' />
           <div className='hero-slider overflow-hidden rounded-[1.75rem] shadow-2xl shadow-brand-900/20 ring-4 ring-white'>
             <Slider {...sliderSettings}>
