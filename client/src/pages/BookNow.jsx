@@ -1,7 +1,15 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { branches, contactInfo, servicesData } from '../assets/assets'
-import { AlertIcon, CheckIcon, ClockIcon, PhoneIcon, SpinnerIcon } from '../components/Icons'
+import {
+  AlertIcon,
+  ArrowRightIcon,
+  CheckIcon,
+  ClockIcon,
+  MessengerIcon,
+  PhoneIcon,
+  SpinnerIcon,
+} from '../components/Icons'
 
 const EMAILJS = {
   serviceId: 'service_d01s24o',
@@ -106,6 +114,23 @@ const BookNow = () => {
               </p>
             </div>
           </div>
+
+          {/* messenger alternative */}
+          <a
+            href={contactInfo.messenger}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='group mt-8 flex items-center gap-4 rounded-2xl bg-gradient-to-r from-[#0a7cff] to-[#a334fa] p-5 text-white shadow-lg shadow-[#0a7cff]/25 transition hover:-translate-y-0.5 hover:shadow-xl'
+          >
+            <span className='grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white text-[#0a7cff]'>
+              <MessengerIcon className='h-6 w-6' />
+            </span>
+            <div className='flex-1'>
+              <p className='font-semibold'>Book via Messenger</p>
+              <p className='text-sm text-white/85'>Chat with us directly on Facebook Messenger.</p>
+            </div>
+            <ArrowRightIcon className='h-5 w-5 transition group-hover:translate-x-1' />
+          </a>
         </div>
 
         {/* form */}
@@ -180,7 +205,12 @@ const BookNow = () => {
               {status === 'error' && (
                 <p role='alert' className='flex items-start gap-2 rounded-xl bg-red-50 p-3 text-sm text-red-700 sm:col-span-2'>
                   <AlertIcon className='mt-0.5 h-4 w-4 shrink-0' />
-                  Something went wrong sending your booking. Please try again or call us at {contactInfo.phones[0]}.
+                  <span>
+                    Something went wrong sending your booking. Please try again, call us at {contactInfo.phones[0]}, or{' '}
+                    <a href={contactInfo.messenger} target='_blank' rel='noopener noreferrer' className='font-semibold underline'>
+                      message us on Messenger
+                    </a>.
+                  </span>
                 </p>
               )}
 

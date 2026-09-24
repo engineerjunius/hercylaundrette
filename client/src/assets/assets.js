@@ -30,6 +30,7 @@ export const contactInfo = {
   phones: ['+639983556546', '+639773304605'],
   email: 'hercylaundrette@gmail.com',
   facebook: 'https://www.facebook.com/hercylaundrette',
+  messenger: 'https://m.me/hercylaundrette',
   hours: '7:00 AM – 7:00 PM',
   days: 'Open everyday',
 }

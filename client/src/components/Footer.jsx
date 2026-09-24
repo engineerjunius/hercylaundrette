@@ -55,7 +55,7 @@ const Footer = () => {
 
       <div className='border-t border-white/10'>
         <p className='page-wrap py-5 text-center text-xs text-brand-300 sm:text-left'>
-          © {new Date().getFullYear()} Hercy Laundrette. All rights reserved. · Built by engineerjunius.dev
+          © 2025 Hercy Laundrette. All rights reserved. · Built by engineerjunius.dev
         </p>
       </div>
     </footer>

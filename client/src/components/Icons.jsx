@@ -118,6 +118,13 @@ export const FacebookIcon = (p) => (
   </Icon>
 )
 
+export const MessengerIcon = (p) => (
+  <Icon {...p}>
+    <path d='M12 2.5c-5.25 0-9.5 3.95-9.5 8.83 0 2.78 1.38 5.26 3.54 6.88V21.5l3.24-1.78c.86.24 1.77.36 2.72.36 5.25 0 9.5-3.95 9.5-8.83S17.25 2.5 12 2.5Z' />
+    <path d='m7 13.5 3-3.2 2.4 2 2.6-2.8' />
+  </Icon>
+)
+
 export const ArrowRightIcon = (p) => (
   <Icon {...p}><path d='M5 12h14M12 5l7 7-7 7' /></Icon>
 )
