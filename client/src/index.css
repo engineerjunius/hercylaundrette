@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&display=swap');
+
+@import "tailwindcss";
+
+/* brand colours taken from the Hercy logo: royal blue + sunshine yellow */
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #eef3ff;
+  --color-brand-100: #dbe5ff;
+  --color-brand-200: #bccfff;
+  --color-brand-300: #8eaaff;
+  --color-brand-500: #2f5bff;
+  --color-brand-600: #1f3fe6;
+  --color-brand-700: #1a32c2;
+  --color-brand-800: #1b2d9b;
+  --color-brand-900: #1a2a73;
+
+  --color-sun-300: #fde76b;
+  --color-sun-400: #fbd928;
+  --color-sun-500: #eab308;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 font-sans text-slate-700 antialiased;
+}
+
+@utility page-wrap {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer;
+}
+
+@utility btn-primary {
+  @apply bg-brand-600 text-white shadow-lg shadow-brand-600/25 hover:bg-brand-700;
+}
+
+@utility btn-accent {
+  @apply bg-sun-400 text-brand-900 shadow-lg shadow-sun-500/25 hover:bg-sun-300;
+}
+
+@utility btn-ghost {
+  @apply bg-white text-brand-800 ring-1 ring-brand-200 hover:bg-brand-50;
+}
+
+@utility card {
+  @apply rounded-2xl bg-white ring-1 ring-slate-200/70 shadow-sm;
+}
+
+@utility eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-600;
+}
+
+@utility field {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-800 placeholder-slate-400 transition focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-100;
+}
+
+/* react-slick dots restyled to match the brand */
+/* right-aligned so the floating hours badge doesn't cover them */
+.hero-slider .slick-dots {
+  bottom: 14px;
+  text-align: right;
+  padding-right: 16px;
+}
+.hero-slider .slick-dots li {
+  margin: 0 2px;
+}
+.hero-slider .slick-dots li button:before {
+  font-size: 9px;
+  color: #fff;
+  opacity: 0.6;
+}
+.hero-slider .slick-dots li.slick-active button:before {
+  color: var(--color-sun-400);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
